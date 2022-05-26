@@ -5,21 +5,21 @@
 class Kusionup < Formula
   desc "A version management tool for kusion"
   homepage "https://github.com/KusionStack/kusionup"
-  version "0.2.14"
+  version "0.2.15-alpha.1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/KusionStack/kusionup/releases/download/v0.2.14/kusionup_0.2.14_Darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "bf8561d2ab4b32073041292ff9354d0196105d5ed3bb84b6b6137d89c022a964"
+    if Hardware::CPU.intel?
+      url "https://github.com/KusionStack/kusionup/releases/download/v0.2.15-alpha.1/kusionup_0.2.15-alpha.1_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "8e7d976dc6efdb54af43a85642a74304d9a7680924ecaf9a460953b548de7dca"
 
       def install
         bin.install "kusionup"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/KusionStack/kusionup/releases/download/v0.2.14/kusionup_0.2.14_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "859a6c59d64187df9fa5fd1ba27d58855ebe82f75124ddccd104163739650a0c"
+    if Hardware::CPU.arm?
+      url "https://github.com/KusionStack/kusionup/releases/download/v0.2.15-alpha.1/kusionup_0.2.15-alpha.1_Darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "61d684c8667ba52abd19d0061b7b262c9154daffd84bf12f3222edf479500594"
 
       def install
         bin.install "kusionup"
@@ -29,16 +29,16 @@ class Kusionup < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/KusionStack/kusionup/releases/download/v0.2.14/kusionup_0.2.14_Linux_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "f5a569f87bf9a169217376f61fc8f70b32227a4b709729d183efee9ab8beb0f8"
+      url "https://github.com/KusionStack/kusionup/releases/download/v0.2.15-alpha.1/kusionup_0.2.15-alpha.1_Linux_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "0514089303bda79fd74c6529d7c92d639067d6239f0a16e6c196c05e7990ad34"
 
       def install
         bin.install "kusionup"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/KusionStack/kusionup/releases/download/v0.2.14/kusionup_0.2.14_Linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "aa9453757aa71cd2a728daab56b5f98ac805c0a3f38b98cae1f50fd4bc155ca1"
+      url "https://github.com/KusionStack/kusionup/releases/download/v0.2.15-alpha.1/kusionup_0.2.15-alpha.1_Linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "fe9610bc142514f25f19c699eebc95ebcc4da340a41d4fb1a69a0ea965a532ce"
 
       def install
         bin.install "kusionup"
