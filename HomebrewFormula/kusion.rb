@@ -5,21 +5,23 @@
 class Kusion < Formula
   desc "Codify and deliver intentions to Kubernetes and Clouds"
   homepage "https://github.com/KusionStack/kusion"
-  version "0.7.3"
+  version "0.7.4"
   license "Apache License"
 
+  depends_on "kclvm"
+
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/KusionStack/kusion/releases/download/v0.7.3/kusion_0.7.3_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "42ddf09ac01b09384f1b428afbc935fee62c01754cc248b4fa68bc91d7cb258f"
+    if Hardware::CPU.intel?
+      url "https://github.com/KusionStack/kusion/releases/download/v0.7.4/kusion_0.7.4_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "b3f71db9b5637f859f277c68f1ce889716de8376ffac8b73cb263e5bca8244a3"
 
       def install
         bin.install "kusion"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/KusionStack/kusion/releases/download/v0.7.3/kusion_0.7.3_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "072c511ac5b391278e6393ed8473b95587a27adc91a779a6bc8ec9f02c3a3872"
+    if Hardware::CPU.arm?
+      url "https://github.com/KusionStack/kusion/releases/download/v0.7.4/kusion_0.7.4_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "ff0735086987cf241cd22cfd1fcd28cb5fdb59852f411ca22b6306cb212f1de5"
 
       def install
         bin.install "kusion"
@@ -29,8 +31,8 @@ class Kusion < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/KusionStack/kusion/releases/download/v0.7.3/kusion_0.7.3_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "a65a91c99fafa9bc79785f5b20ef50f709289f014c390ae80cd6b8df8bb036cb"
+      url "https://github.com/KusionStack/kusion/releases/download/v0.7.4/kusion_0.7.4_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "e029648c345e675ddd3dabd0203b5bf00bb4f2af717d7007c20f119de0d3f569"
 
       def install
         bin.install "kusion"
