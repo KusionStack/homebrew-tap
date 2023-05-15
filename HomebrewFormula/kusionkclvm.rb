@@ -1,24 +1,24 @@
 class Kusionkclvm < Formula
   desc "A constraint-based record & functional language mainly used in configuration and policy scenarios."
   homepage "https://kcl-lang.io"
-  version "0.4.5"
+  version "0.4.6.2"
   license "Apache License"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/KusionStack/KCLVM/releases/download/v0.4.5/kclvm-v0.4.5-darwin-arm64.tar.gz"
-      sha256 "2c4c44d16fa3acdc39aa77f4e854bc2c29ba471c1263d7daaf68acc9bc5c287e"
+      url "https://github.com/KusionStack/KCLVM/releases/download/v0.4.6.2/kclvm-v0.4.6.2-darwin-arm64.tar.gz"
+      sha256 "fbc1cf817c1ac994bd1ff3ba8b5929da1e7b480f9c871ee21f1cfa61deb29fd3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/KusionStack/KCLVM/releases/download/v0.4.5/kclvm-v0.4.5-darwin-amd64.tar.gz"
-      sha256 "0eb822221feb53d7c2e6392aebf9a9313f9aea87ab7e0feecab2d205914de953"
+      url "https://github.com/KusionStack/KCLVM/releases/download/v0.4.6.2/kclvm-v0.4.6.2-darwin-amd64.tar.gz"
+      sha256 "cad13fc0c6a7f7d7965c218430a4d063e0ddd66bc78fe26a13b6c54971a21d4b"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/KusionStack/KCLVM/releases/download/v0.4.5/kclvm-v0.4.5-linux-amd64.tar.gz"
-      sha256 "e82d1628325d094e6ee4f21005077988190f82d320a32af866e2c68b92fa63c2"
+      url "https://github.com/KusionStack/KCLVM/releases/download/v0.4.6.2/kclvm-v0.4.6.2-linux-amd64.tar.gz"
+      sha256 "6f72498053f3927da3bc665432d54fb95d9766a09b6f12b5b193e8a858de6615"
     end
   end
 
