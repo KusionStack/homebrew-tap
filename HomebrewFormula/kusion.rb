@@ -8,7 +8,7 @@ class Kusion < Formula
   version "0.8.1-rc.0"
   license "Apache License"
 
-  depends_on "kclvm"
+  depends_on "kusionkclvm"
 
   on_macos do
     if Hardware::CPU.intel?
