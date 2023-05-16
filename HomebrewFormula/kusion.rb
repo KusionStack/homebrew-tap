@@ -8,8 +8,6 @@ class Kusion < Formula
   version "0.8.1-rc.0"
   license "Apache License"
 
-  depends_on "kusionkclvm"
-
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/KusionStack/kusion/releases/download/v0.8.1-rc.0/kusion_0.8.1-rc.0_darwin_amd64.tar.gz", using: CurlDownloadStrategy
