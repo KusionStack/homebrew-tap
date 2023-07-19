@@ -17,7 +17,6 @@ brew install kusionup
 | ---------- | ------- | ----------- |
 | [kusionup](https://github.com/KusionStack/kusionup) | [formula](HomebrewFormula/kusionup.rb) | A version management tool for kusion |
 | [kusion](https://github.com/KusionStack/kusion) | [formula](HomebrewFormula/kusion.rb) | Platform Engineering Engine: Deliver intentions to Kubernetes and Clouds |
-| [KCLVM](https://github.com/KusionStack/KCLVM) | [formula](HomebrewFormula/kusionkclvm.rb) | KCL: Constraint-based Record & Functional Language |
 
 ## Documentation
 
