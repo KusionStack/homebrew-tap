@@ -8,14 +8,13 @@ Auto release Homebrew Taps by GoReleaser reference this [document](https://gorel
 
 ```
 brew tap KusionStack/tap
-brew install kusionup
+brew install kusion
 ```
 
 ## Formulae
 
 | Repository | Formula | Description |
 | ---------- | ------- | ----------- |
-| [kusionup](https://github.com/KusionStack/kusionup) | [formula](HomebrewFormula/kusionup.rb) | A version management tool for kusion |
 | [kusion](https://github.com/KusionStack/kusion) | [formula](HomebrewFormula/kusion.rb) | Platform Engineering Engine: Deliver intentions to Kubernetes and Clouds |
 
 ## Documentation
