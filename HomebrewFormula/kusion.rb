@@ -5,21 +5,21 @@
 class Kusion < Formula
   desc "Codify and deliver intentions to Kubernetes and Clouds"
   homepage "https://github.com/KusionStack/kusion"
-  version "0.11.1"
+  version "0.12.0"
   license "Apache License"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/KusionStack/kusion/releases/download/v0.11.1/kusion_0.11.1_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "cb6806d9b1cd394651b5f52a3af2f7da0590eefd11ddf45c97f1398693dba666"
+    on_intel do
+      url "https://github.com/KusionStack/kusion/releases/download/v0.12.0/kusion_0.12.0_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "afcd77d75e99e74744e7fc75abf8a86230eaa600f5592cb9ce2ff940c7c4f98c"
 
       def install
         bin.install "kusion"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/KusionStack/kusion/releases/download/v0.11.1/kusion_0.11.1_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "ae37ff5c946559135ccf3c09e518b8b11a00afa572ef6fc24f97d714f1fa9429"
+    on_arm do
+      url "https://github.com/KusionStack/kusion/releases/download/v0.12.0/kusion_0.12.0_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "cf75eafdba9d4b29c7d9fc8290e48052903d7ee5f23b9405639857d55ff89c86"
 
       def install
         bin.install "kusion"
@@ -28,12 +28,14 @@ class Kusion < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/KusionStack/kusion/releases/download/v0.11.1/kusion_0.11.1_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "34f8b0724671e2bd2a0b303f2017cdeb6cefa7ccb6893fb15397886392df64e5"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/KusionStack/kusion/releases/download/v0.12.0/kusion_0.12.0_linux_amd64.tar.gz", using: CurlDownloadStrategy
+        sha256 "cfec7b03dfa8ded9b770457f6baf7315578b332dff98b5f4ee5e5297496b52d5"
 
-      def install
-        bin.install "kusion"
+        def install
+          bin.install "kusion"
+        end
       end
     end
   end
