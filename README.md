@@ -1,4 +1,6 @@
 # Homebrew Tap
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FKusionStack%2Fhomebrew-tap.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FKusionStack%2Fhomebrew-tap?ref=badge_shield)
+
 
 The [Homebrew](https://brew.sh/index_zh-cn) tap for the [KusionStack](https://kusionstack.io) projects.
 
@@ -21,3 +23,7 @@ brew install kusion
 
 `brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh/)
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FKusionStack%2Fhomebrew-tap.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FKusionStack%2Fhomebrew-tap?ref=badge_large)
